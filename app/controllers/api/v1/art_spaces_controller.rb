@@ -1,0 +1,2 @@
+class ArtSpacesController < ApplicationController
+end
