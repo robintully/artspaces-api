@@ -6,4 +6,5 @@ Rails.application.routes.draw do
       resources :users, except: [:new, :edit]
     end
   end
+  post '/login', to: 'sessions#create'
 end
