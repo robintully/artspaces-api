@@ -8,7 +8,7 @@
 
 
 
-User.create([{ name: 'Alana', email: "alanaissocool@alana.alana" }, { name: 'Robin', email: "robinisaLAMEO@teeheealanaiscool.com" }])
+User.create([{ name: 'Alana', email: "alana@test.com", password: "password1" }, { name: 'Robin', email: "robin@test.com", password: "password1" }])
 
 Art.create([
   { name: 'Starry Night 2: Star Harder', description: 'Real good stuff, kiddo', img_link: 'http://orig07.deviantart.net/6eb5/f/2016/055/e/3/untitled_drawing_by_starry_night_dog-d9szaa8.png', user: User.first}, 
