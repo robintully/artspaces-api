@@ -10,8 +10,19 @@
 
 User.create([{ name: 'Alana', email: "alanaissocool@alana.alana" }, { name: 'Robin', email: "robinisaLAMEO@teeheealanaiscool.com" }])
 
-Art.create([{ name: 'Starry Night 2: Star Harder', description: 'Real good stuff, kiddo', img_link: 'http://orig07.deviantart.net/6eb5/f/2016/055/e/3/untitled_drawing_by_starry_night_dog-d9szaa8.png', user: User.first}, { name: 'Robin Elbow Bowls', description: 'Eww', img_link: 'https://notwashingtonirving.files.wordpress.com/2015/11/elbow.gif', user: User.first}])
-Art.create([{ name: 'Razzle Dazzle', description: 'A little Razzle, A LOTTA DAZZLE', img_link: 'http://www.graphicine.com/wp-content/uploads/2014/02/1417729_537468716336813_243128434_o.jpg', user: User.last}])
+Art.create([
+  { name: 'Starry Night 2: Star Harder', description: 'Real good stuff, kiddo', img_link: 'http://orig07.deviantart.net/6eb5/f/2016/055/e/3/untitled_drawing_by_starry_night_dog-d9szaa8.png', user: User.first}, 
+  { name: 'Robin Elbow Bowls', description: 'Eww', img_link: 'https://notwashingtonirving.files.wordpress.com/2015/11/elbow.gif', user: User.first}
+  ])
+Art.create([
+  { name: 'Razzle Dazzle', description: 'A little Razzle, A LOTTA DAZZLE', img_link: 'http://www.graphicine.com/wp-content/uploads/2014/02/1417729_537468716336813_243128434_o.jpg', user: User.last},
+ {name: 'Razzle Dazzle', description: 'A little Razzle, A LOTTA DAZZLE', img_link: 'http://i43.tinypic.com/w6qown.jpg', user: User.last},
+  { name: 'SHAMON! HEEHEE!', description: 'Real good stuff, kiddo', img_link: 'http://blogs.uoregon.edu/ttow/files/2014/05/michael-jackson-art-hd-wallpapers-231r1lx.jpg', user: User.first}, 
+  { name: 'Friction Fish #4', description: 'Eww', img_link: 'https://upload.wikimedia.org/wikipedia/commons/2/20/Statuette_Mambia_Nig%C3%A9ria.jpg', user: User.first},
+   { name: 'Awesome in a box!', description: 'Eww', img_link: 'http://art.ngfiles.com/images/432000/432743_jcarignan443_above-the.jpg', user: User.first},
+    { name: 'Damn Commies', description: 'Eww', img_link: 'http://i.imgur.com/a0CC7b5.jpg', user: User.first},
+        { name: 'For Alana', description: 'Eww', img_link: 'http://vignette1.wikia.nocookie.net/shrek/images/b/b3/Shrek_2_Movie_Poster.jpg/revision/latest?cb=20120215074336', user: User.first}
+  ])
 
 Space.create([
   {name: 'Alanas Closet', location: 'God only knows', description: 'straight chillin', img_link: 'http://2beesinapod.com/wp-content/uploads/2014/03/IMG_4265.jpg', user: User.first},
