@@ -2,7 +2,12 @@ module Api
   module V1
     class ArtsController < ApplicationController
       def index
-        render json: Art.includes(:user, :spaces), include: ['user', 'spaces']
+        if params[:page]
+          arts = Art.page(page_params[:number]).per(page_params[:size])
+        else
+          arts = Art.includes(:user, :spaces)
+        end
+          render json: arts, include: ['user', 'spaces']
       end
 
       def create
@@ -12,6 +17,10 @@ module Api
       private
       def art_params
         params.require(:data).permit(:attributes => [:name, :description, :"img-link"])
+      end
+
+      def page_params
+        params.require(:page).permit([:size, :number])
       end
     end
   end
