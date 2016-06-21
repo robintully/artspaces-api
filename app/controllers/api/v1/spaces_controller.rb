@@ -12,8 +12,12 @@ module Api
       end
 
       def create
-        binding.pry
         Space.create(name: space_params[:attributes][:name], location: space_params[:attributes][:location], description: space_params[:attributes][:description], img_link: space_params[:attributes]["img-link"], user: current_user)
+      end
+
+      def update
+        space = Space.find_by(id: edit_params[:id])
+        space.update(name: edit_params[:attributes][:name], location: edit_params[:attributes][:location], description: edit_params[:attributes][:description], img_link: edit_params[:attributes]["img-link"])
       end
 
       private
@@ -24,6 +28,10 @@ module Api
 
       def page_params
         params.require(:page).permit([:size, :number])
+      end
+
+      def edit_params
+        params.require(:data).permit(:id, :attributes => [:name, :description, :location, :"img-link"])
       end
     end
   end
