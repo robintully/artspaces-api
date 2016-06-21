@@ -20,6 +20,10 @@ module Api
         space.update(name: edit_params[:attributes][:name], location: edit_params[:attributes][:location], description: edit_params[:attributes][:description], img_link: edit_params[:attributes]["img-link"])
       end
 
+      def destroy
+        Space.find(params[:id]).destroy
+      end
+
       private
 
       def space_params

@@ -20,6 +20,10 @@ module Api
         art.update(name: edit_params[:attributes][:name], description: edit_params[:attributes][:description], img_link: edit_params[:attributes]["img-link"])
       end
 
+      def destroy
+        Art.find(params[:id]).destroy
+      end
+
       private
       def art_params
         params.require(:data).permit(:attributes => [:name, :description, :"img-link"])
