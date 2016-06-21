@@ -10,10 +10,8 @@ module Api
       def create
         user = User.new(name: user_params[:attributes][:name], email: user_params[:attributes][:email], password: user_params[:attributes][:password], password_confirmation: user_params[:attributes]["password-confirmation"])
         if user.save
-          binding.pry
           render json: {}, status: 200
         else
-          binding.pry
           render json: ErrorSerializer.serialize(user.errors), status: 422
         end
       end
