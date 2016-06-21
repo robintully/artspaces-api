@@ -1,6 +1,7 @@
 module Api
   module V1
     class ArtsController < ApplicationController
+      skip_before_action :authenticate, only: [:index]
       def index
         if params[:page]
           arts = Art.page(page_params[:number]).per(page_params[:size])
