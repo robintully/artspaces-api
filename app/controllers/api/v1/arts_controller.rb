@@ -14,6 +14,11 @@ module Api
         Art.create(name: art_params[:attributes][:name], description: art_params[:attributes][:description], img_link: art_params[:attributes]["img-link"], user: current_user)
       end
 
+      def destroy
+        Art.find(params[:id]).destroy
+      end
+
+
       private
       def art_params
         params.require(:data).permit(:attributes => [:name, :description, :"img-link"])
